@@ -7,6 +7,53 @@ import IMAGE4 from '../../assets/portfolio4.jpg'
 import IMAGE5 from '../../assets/portfolio5.png'
 import IMAGE6 from '../../assets/portfolio6.jpg'
 
+const data = [
+    {
+        id:1,
+        Image:IMAGE1,
+        title:'This is portfolio item title',
+        github:'https://github.com/Elgun837',
+        demo:'https://github.com/Elgun837'
+    },
+    {
+        id:2,
+        Image:IMAGE2,
+        title:'This is portfolio item title',
+        github:'https://github.com/Elgun837',
+        demo:'https://github.com/Elgun837'
+    },
+    {
+        id:3,
+        Image:IMAGE3,
+        title:'This is portfolio item title',
+        gthub:'https://github.com/Elgun837',
+        demo:'https://github.com/Elgun837'
+    },
+    {
+        id:4,
+        Image:IMAGE4,
+        title:'This is portfolio item title',
+        github:'https://github.com/Elgun837',
+        demo:'https://github.com/Elgun837'
+    },
+    {
+        id:5,
+        Image:IMAGE5,
+        title:'This is portfolio item title',
+        github:'https://github.com/Elgun837',
+        demo:'https://github.com/Elgun837'
+    },
+    {
+        id:6,
+        Image:IMAGE6,
+        title:'This is portfolio item title',
+        github:'https://github.com/Elgun837',
+        demo:'https://github.com/Elgun837'
+    }
+
+]
+
+
 
 const Portfolio = () => {
   return (
@@ -15,57 +62,20 @@ const Portfolio = () => {
         <h2>Portfolio</h2>
 
         <div className="container portfolio__container">
-            <article className='portfolio__item'>
-                <div className="portfolio__item-image">
-                <img src={IMAGE1} alt="portfolio image" />
-                </div>
-                <h3>This is portfolio item title</h3>
-                <a href="#" className='btn btn-primary'>GitHub</a>
-                <a href="#" className='btn'>Live Demo</a>
-            </article>
-            <article className='portfolio__item'>
-                <div className="portfolio__item-image">
-                <img src={IMAGE2} alt="portfolio image" />
-                </div>
-                <h3>This is portfolio item title</h3>
-                <a href="#" className='btn btn-primary'>GitHub</a>
-                <a href="#" className='btn'>Live Demo</a>
-            </article>
-
-            <article className='portfolio__item'>
-                <div className="portfolio__item-image">
-                <img src={IMAGE3} alt="portfolio image" />
-                </div>
-                <h3>This is portfolio item title</h3>
-                <a href="#" className='btn btn-primary'>GitHub</a>
-                <a href="#" className='btn'>Live Demo</a>
-            </article>
-
-            <article className='portfolio__item'>
-                <div className="portfolio__item-image">
-                <img src={IMAGE4} alt="portfolio image" />
-                </div>
-                <h3>This is portfolio item title</h3>
-                <a href="#" className='btn btn-primary'>GitHub</a>
-                <a href="#" className='btn'>Live Demo</a>
-            </article>
-
-            <article className='portfolio__item'>
-                <div className="portfolio__item-image">
-                <img src={IMAGE5} alt="portfolio image" />
-                </div>
-                <h3>This is portfolio item title</h3>
-                <a href="#" className='btn btn-primary'>GitHub</a>
-                <a href="#" className='btn'>Live Demo</a>
-            </article>
-            <article className='portfolio__item'>
-                <div className="portfolio__item-image">
-                <img src={IMAGE6} alt="portfolio image" />
-                </div>
-                <h3>This is portfolio item title</h3>
-                <a href="#" className='btn btn-primary'>GitHub</a>
-                <a href="#" className='btn'>Live Demo</a>
-            </article>
+            {
+                data.map(({id, Image, title, github, demo}) => {
+                    return (
+                        <article key={id} className='portfolio__item'>
+                            <div className="portfolio__item-image">
+                            <img src={Image} alt={title} />
+                            </div>
+                            <h3>{title}</h3>
+                            <a href={github} className='btn btn-primary'>GitHub</a>
+                            <a href={demo} className='btn'>Live Demo</a>
+                        </article>
+                    )
+                })
+            }
 
 
         </div>
