@@ -1,9 +1,6 @@
 {
-<<<<<<< HEAD
+
   "homepage": "https://elgun837.github.io//react-portfolio",
-=======
-  "homepage":"https://elgun837.github.io//React-portfolio" ,
->>>>>>> 57a72e2059dc7d2383933f6294cc6f69e8d7560f
   "name": "react-portfolio",
   "version": "0.1.0",
   "private": true,
@@ -22,14 +19,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-<<<<<<< HEAD
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-=======
     "predeploy":"npm run build",
     "deploy":"gh-pages -d build",
->>>>>>> 57a72e2059dc7d2383933f6294cc6f69e8d7560f
-    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
