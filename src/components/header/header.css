@@ -1,4 +1,5 @@
 header{
+    height:100%;
     padding-top: 7rem;
     overflow: hidden;
 }
@@ -29,7 +30,9 @@ header{
     left: 0;
     bottom: 3rem;
 }
-
+.me{
+    height:100%
+}
 .header__socials::after{
     content: '';
     width: 1px;
